@@ -33,5 +33,6 @@ module.exports = function (app) {
     router.route('/fingerprints/mean').post(controllers.meanfp.create);
     router.route('/samples/beacons/patch').post(controllers.beacon.patchCreate);
     router.route('/devices').get(controllers.device.queryByName);
+
     app.use('/api/v1', router);
 };
