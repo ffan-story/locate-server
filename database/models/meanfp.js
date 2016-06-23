@@ -3,12 +3,15 @@
  * Created by xuchunlei on 16/6/20.
  */
 
-export default function (orm, db) {
+module.exports = function (orm, db) {
     console.info('mean', 'define is called');
     var Mean = db.define('finger_beacon_mean', {
             spot_id : { type : 'integer', unsigned : true, required : true },
-            beacon_id : { type : 'integer', unsigned : true, required : true },
-            device_id : { type : 'integer', unsigned : true, required : true },
-            rssi : { type : 'integer', required : true }
+            uuid : { type : 'text', size : 40, required : true },
+            major : { type : 'integer', unsigned : true, required : true },
+            minor : { type : 'integer', unsigned : true, required : true },
+            device: { type: 'text', required: true },
+            rssi : { type : 'integer', required : true },
+            zone_id: { type : 'integer', unsigned : true, required : true }
         });
 }

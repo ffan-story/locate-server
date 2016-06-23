@@ -4,7 +4,7 @@
  */
 
 module.exports = function (orm, db) {
-    var Spot = db.define('device', {
+    var Device = db.define('device', {
             name : { type : 'text', required : true }
         });
 };

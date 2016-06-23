@@ -81,7 +81,7 @@ module.exports = {
                                        .page(pIndex, pSize);
         pageModel.run(function (err, results) {
             if(err) {
-                next(err);
+                return next(err);
             }
             var spotList = results.map(function (m) {
                 return {

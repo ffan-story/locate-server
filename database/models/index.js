@@ -14,6 +14,7 @@ function setup(db, cb) {
     require('./spot')(orm, db);
     require('./beacon')(orm, db);
     require('./device')(orm, db);
+    require('./meanfp')(orm, db);
     return cb(null, db);
 }
 
